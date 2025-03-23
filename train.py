@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import skops.io as sio
 from sklearn.compose import ColumnTransformer
@@ -55,6 +56,9 @@ print("Accuracy:", str(round(accuracy, 2) * 100) + "%", "F1:", round(f1, 2))
 ## Confusion Matrix Plot
 import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
+
+# Ensure the directory exists
+os.makedirs("./Results", exist_ok=True)
 
 predictions = pipe.predict(X_test)
 cm = confusion_matrix(y_test, predictions, labels=pipe.classes_)
