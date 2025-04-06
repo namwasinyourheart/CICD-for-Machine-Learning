@@ -70,5 +70,5 @@ gr.Interface(
     title=title,
     description=description,
     article=article,
-    theme=gr.themes.Soft(),
+    theme=gr.themes.Ocean(),
 ).launch()
