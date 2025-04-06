@@ -17,3 +17,8 @@ jobs:
         env:
           HF: ${{ secrets.HF }}
         run: make deploy HF=$HF
+        # run: |
+        #   echo "$HF_TOKEN" | huggingface-cli login --token
+        #   huggingface-cli repo create Drug-Classification --type=spaces --yes || true
+        #   git remote add hf https://huggingface.co/namfam/Drug-Classification || true
+        #   git push hf main --force
